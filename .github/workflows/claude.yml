@@ -22,5 +22,6 @@ jobs:
       - name: Run Claude Code
         uses: anthropics/claude-code-action@v1
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          use_commit_signing: true         # the ONLY non-default line (a documented, supported option)
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          ssh_signing_key: ${{ secrets.SSH_SIGNING_KEY }}
+          show_full_output: true      
